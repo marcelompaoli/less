@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Less</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Compilação com Less">
+	<meta name="keywords" content="less, css">
+	<meta name="author" content="Marcelo de Moura Paoli">
+	<link rel="stylesheet" type="text/css" href="css/lapaoli-style.css">
+  <meta http-equiv="refresh" content="8">
+	
+	<!-- <link rel="stylesheet/less" type="text/css" href="lapaoli-style.less" /> -->
+	<!-- Download do arquivo less.js ou less.min.ls e carregar localmente -->
+	<!-- <script src="dist/less.min.js"></script> -->
+
+	<!-- Carregamento diretamente do site -->
+	<!--<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>-->
+</head>
+
+<body>
+
+  <div class="introducao">
+	  <h2>Métodos de carregar os arquivos e o Browser compilar automaticamente, vide código fonte desta pag.</h2>
+	  <h3><strong>OBS: </strong> Podemos utilizar o Koala com compilar arquivos css</h3>
+	  <a href="http://koala-app.com/">Koala-app.com</a>
+  <hr>
+  </div>
+
+  <div class="variaveis">
+		<p>Criamos a variável com: </p>
+		<p>@seletor-propriedade-01: color;</p>
+		<p>Após identificar o seletor color na variável alteramos a cor para blue através da própria variável.</p>
+		<p class="classe-seletor-propriedade-01">@{seletor-propriedade-01}: @blue;</p>
+		<br>
+		<p>Alteramos a cor do texto e seu background com:</p>
+		<div class="classe-seletor-propriedade-01">
+			<p>@{seletor-propriedade-01}: @red;</p>
+			<p>background-@{seletor-propriedade-01}: @yellow;</p>
+		</div>
+		<div>
+			<p>Criamos a "@seletor-propriedade-02: div;"
+			<p>Alteramos a div através de sua propriedade DIV</p>
+			<p>@{seletor-propriedade-02} {</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;@{seletor-propriedade-01}: @white;</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;background-@{seletor-propriedade-01}: @black;</p>
+			}</p>
+		</div>
+    <hr>
+	  <p>Variáves como Strings e Caminhos<p>
+	  <h4> <-- Conteúdo Before e After --> </h4>
+    <br>
+    <a href="https://google.com" target="_self">Google</a>
+    <hr>
+  </div>
+
+  <div class="estruturaimport">
+    <h1>Estrutura e Import</h1>
+    <div class="primeiro">
+      <h1>Teste 01</h1>
+      <h2>Teste 02</h2>
+    </div>
+    <div class="segundo">
+      <h1>Teste 03</h1>
+      <div class="terceiro">
+        <h2>Teste 04</h2>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

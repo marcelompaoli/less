@@ -1,0 +1,98 @@
+/* Colors */
+/* RGB */
+@blue: #0000ff;
+@green: #00ff00;
+@red: #ff0000;
+@white: @blue + @green + @red;
+
+/* CMYK */
+@cian: @blue + @green;
+@magenta: @blue + @red;
+@yellow: @green + @red;
+@black: @cian - @magenta - @yellow;
+
+/* MISC COLORS */
+@darkblue: #08088A;
+@darkgreen: #088A08;
+@darkred: #8A0808;
+
+/* Variáveis */
+/* Podemos usar variáveis como também como seletores */
+
+@seletor-propriedade-01: color;
+@seletor-propriedade-02: div;
+
+.variaveis .classe-seletor-propriedade-01 {
+	@{seletor-propriedade-01}: @blue;
+}
+.variaveis div.classe-seletor-propriedade-01 {
+	@{seletor-propriedade-01}: @red;
+	background-@{seletor-propriedade-01}: @yellow;
+}
+.variaveis @{seletor-propriedade-02} {
+	@{seletor-propriedade-01}: @white;
+	background-@{seletor-propriedade-01}: @black;
+}
+
+/* Variáveis como String e com Caminhos */
+@conteudo: "Bem vindo ao site, fique à vontade para navegar";
+@imagem: "../img";
+
+.variaveis h4:before, h4:after {
+	content: @conteudo;
+	color: @magenta;
+}
+.variaveis a:after {
+	content: url("@{imagem}/seguir.png");
+}
+
+/* Estrutura e Import */
+/* Estrutura */
+
+.estruturaimport {
+	.primeiro {
+		border: 5px solid #000;
+		h1 {
+			background-color: #f00;
+		}
+		h2 {
+			background-color: #0f0;
+		}
+	}
+	.segundo {
+		border: 5px dashed #00f;
+		h1 {
+			background-color: #ff0;
+		}
+		.terceiro {
+			h2 {
+				background-color: #f0f;
+			}
+		}
+	}
+}
+
+/* Importando */
+
+@import "imported.less";
+
+/* OBS: Podemos separar arquivos less conforme: "cores / variáveis / mixers e outros" 
+conforme seu critério de trabalho */
+
+/************************************/
+/* Formatação de Classes e em Geral */
+/* Classes */
+.lpa-blue-dark {
+	color: @white;
+	background-color: @darkblue;
+}
+.lpa-green-dark {
+	color: @white;
+	background-color: @darkgreen;
+}
+.lpa-red-dark {
+	color: @white;
+	background-color: @darkred;
+}
+
+
